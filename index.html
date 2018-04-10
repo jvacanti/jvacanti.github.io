@@ -1,35 +1,125 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset-"utf-8">
-        <title>JenVacanti</title>
-    </head>
-    <body>
-        <img width="200" src="http://lorempixel.com/400/600" alt="Soccer Player">
-        <br>
-        <h1>About Me</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <br>
-        <h5>Lets get social</h5>
-        <ul>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Facebook</a></li>
-            <li><a href="">LinkedIn</a></li>
-        </ul>
-        <br>
-        <br>
-        <table style="width:100%">
-                <tr>
-                  <th>Color</th>
-                  <th>Food</th> 
-                  <th>Music</th>
-                </tr>
-                <tr>
-                  <td>Yellow</td>
-                  <td>Tacos</td> 
-                  <td>Country</td>
-                </tr>
-              </table>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+           <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+           <!-- Include all compiled plugins (below), or include individual files as needed -->
+           <script src="js/bootstrap.min.js"></script>
+           <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="index.html">Latitude</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Plots</a>
+                      <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                          <a class="dropdown-item" href="cloudiness.html">City Latitude vs. Cloudiness</a>
+                          <a class="dropdown-item" href="humidity.html">City Latitude vs. Humidity</a>
+                          <a class="dropdown-item" href="temperature.html">City Latitude vs. Max Temperature</a>
+                          <a class="dropdown-item" href="wind.html">City Latitude vs. Wind Speed</a>
+                      </div>
+                  </li>
+              <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+                <h2>Say it with Latitude</h2>
+                <h5>We all know the weather is warmer near the equator, but how would you prove it?</h5>
+                <br>
+                <p>In this project I analyze how weather changes in relation to the equator. I used the OpenWeatherMap API to create a dataset of more than 500 cities across the globe. 
+                  Then using Matplotlib, I created plots of weather vs. latitude including temperature, cloudiness, wind speed and humidity.</p>
+                <p><a class="btn btn-primary btn-lg" href="data.html" role="button">See the data</a></p>
+        </div>
+    </div>
+
+    <!-- Creates the Overall Grid -->
+    <div class="container">
+  
+      <div class="row">
+  
+          <div class="row">
+                  <div class="col-sm-6 col-md-3">
+                          <div class="card text-white bg-primary mb-3">
+                                  <div class="card-header">City Latitude vs. Cloudiness</div>
+                                  <div class="card-body">
+                                    
+                                    <img style="height: 100%; width: 100%; display: block;" src="images/lat_v_cloud.png" alt="Scatter Plot: Lattitude v. Cloudiness">
+                                    <p class="card-text">According the <a href="https://earthobservatory.nasa.gov/IOTD/view.php?id=85843">NASA</a>, there are three broad bands where...</p>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="cloudiness.html" style="color:inherit">Read more</a></button>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                          <div class="card text-white bg-primary mb-3">
+                                  <div class="card-header">City Latitude vs. Humidity</div>
+                                  <div class="card-body">
+                                   
+                                    <img style="height: 100%; width: 100%; display: block;" src="images/lat_v_humid.png" alt="Scatter Plot: City Latitude vs. Humidity">
+                                    <p class="card-text">Higher humidity occurred in the middle lattitudes...</p>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="humidity.html" style="color:inherit">Read more</a></button>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                          <div class="card text-white bg-primary mb-3">
+                                  <div class="card-header">City Latitude vs. Max Temp</div>
+                                  <div class="card-body">
+                                    
+                                    <img style="height: 100%; width: 100%; display: block;" src="images/lat_v_temp.png" alt="Scatter Plot: City Latitude vs. Max Temperature">
+                                    <p class="card-text">As expected, the weather becomes significantly warmer...</p>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="temperature.html" style="color:inherit">Read more</a></button>
+                                  </div>
+                                </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                          <div class="card text-white bg-primary mb-3">
+                                  <div class="card-header">City Latitude vs. Wind Speed</div>
+                                  <div class="card-body">
+                                    
+                                    <img style="height: 100%; width: 100%; display: block;" src="images/lat_v_wind.png" alt="Scatter Plot: City Latitude vs. Wind Speed">
+                                    <p class="card-text">Wind speed had an even distribution...</p>
+                                    <button type="button" class="btn btn-secondary">
+                                        <a href="wind.html" style="color:inherit">Read more</a></button>
+                                  </div>
+                                </div>
+                  </div>
+                </div>
+<br>
+<div class="col-sm-12">
+    <div class="container">
+      <div align="center">
+        <hr class="my-4">
+            <h5>Analysis and design by Jen Vacanti</h5>
+            <br>
+            <p>© 2018 Copyright Vacanti LLC</p>
+      </div> 
+    </div>
+</div>
+</body>
 </html>
